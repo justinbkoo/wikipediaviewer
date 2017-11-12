@@ -1,6 +1,6 @@
 body {
-    background-color: white;
-    color: black;
+    background-color: #1d3d7c;
+    color: white;
     vertical-align: middle;
     height: 100vh;
     min-height: 600px;
@@ -40,8 +40,10 @@ a:hover {
 }
 
 #search_query {
+    background-color: #1d3d7c;
+    color: white;
     min-width: 250px;
-    padding: 4px 15px 4px 15px;
+    padding: 4px 35px 4px 15px;
     border: 3px solid orange;
     border-top-left-radius: 100%250px;
     border-bottom-left-radius: 100%250px;
@@ -76,7 +78,7 @@ a:hover {
 
 .forwardSlash {
      height: 105%;
-     width: 12%;
+     width: 2px;
      background-color: orange;
      transform: rotate(45deg);
      margin-left: 8px;
@@ -84,7 +86,7 @@ a:hover {
 
 .backSlash {
     height: 105%;
-    width: 12%;
+    width: 2px;
     background-color: orange;
     transform: rotate(-45deg);
     margin-left: 8px;
@@ -97,7 +99,7 @@ a:hover {
 }
 
 .listResult {
-    background-color: #cccccc;
+    background-color: #DDDDDD;
     padding: 10px;
     margin-top: 10px;
     color: black;
