@@ -1,19 +1,19 @@
 // Main JavaScript file for Wikipedia Viewer
 
 // Relevant object IDs
-var resultsId = "#results";
-var searchContainerId = "#search";
-var searchButtonId = "#search_button";
-var searchQueryId = "#search_query";
+const resultsId = "#results";
+const searchContainerId = "#search";
+const searchButtonId = "#search_button";
+const searchQueryId = "#search_query";
 
 // Relevant objects
-var searchContainer;
-var searchButton;
-var searchQuery;
-var results;
+let searchContainer;
+let searchButton;
+let searchQuery;
+let results;
 
 // Strings to compare old and new queries.
-var query;
+let query;
 
 /*
  * Initialize objects and click actions
@@ -53,7 +53,7 @@ function searchButtonOnClick() {
             //console.log(search);
 
             // String used in titles field of 'data' in upcoming ajax call.
-            // Form: "title1|title2|title3|...|lasttitle"
+            // Form: "title1|title2|title3|...|lastTitle"
             const titles = search.map(searchItem => searchItem["title"]).join('|');
             //console.log(titles);
             $.ajax({
@@ -74,10 +74,11 @@ function searchButtonOnClick() {
                     //console.log(pages);
                     const markup = `
                     ${search.map(searchItem =>
-                        `<a href="https://en.wikipedia.org/wiki/${searchItem["title"].replace(' ', '_')}"><li>
-                            ${searchItem["title"]}
-                            <h5>${pages[searchItem["pageid"] + ""].extract}</h5>
-                         </li></a>`)
+                    `<a href="https://en.wikipedia.org/wiki/${searchItem["title"].replace(' ', '_')}">
+                        <li>${searchItem["title"]}
+                            <h6>${pages[searchItem["pageid"] + ""].extract}</h6>
+                        </li>
+                    </a>`)
                         .join('')}`;
                     //console.log(markup);
                     results.html(markup);
@@ -87,4 +88,9 @@ function searchButtonOnClick() {
             });
         }
     });
+}
+
+function clearResults() {
+    results.html("");
+    $(".block").css("height", "100%");
 }
