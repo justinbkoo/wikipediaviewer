@@ -5,7 +5,7 @@ body {
     height: 100vh;
     min-height: 600px;
     width: 100vw;
-    padding: 10% 20% 10% 20%;
+    padding: 10% 15% 10% 15%;
     overflow-x: hidden;
 }
 
@@ -37,10 +37,63 @@ a:hover {
 #search {
     display: inline-block;
     vertical-align: middle;
+    text-align: center;
+}
+
+#search_query {
+    min-width: 250px;
+    padding: 4px 15px 4px 15px;
+    border: 2px solid orange;
+    border-top-left-radius: 100%250px;
+    border-bottom-left-radius: 100%250px;
+    border-top-right-radius: 100%250px;
+    border-bottom-right-radius: 100%250px;
+    outline: none;
+}
+
+#search_button {
+    visibility: hidden;
+}
+
+#reset_button {
+    height: 20px;
+    width: 10px;
+    vertical-align: middle;
+    margin-top: -65px;
+    margin-left: 210px;
+    background: transparent;
+    border: none;
+    outline: none;
+}
+
+#eks {
+    height: 20px;
+    width: 20px;
+}
+
+#eks:hover {
+    opacity: .7;
+}
+
+.forwardSlash {
+     height: 105%;
+     width: 12%;
+     background-color: orange;
+     transform: rotate(45deg);
+     margin-left: 8px;
+ }
+
+.backSlash {
+    height: 105%;
+    width: 12%;
+    background-color: orange;
+    transform: rotate(-45deg);
+    margin-left: 8px;
+    margin-top: -21px;
 }
 
 #results {
-    /*margin-top: 50px;*/
+    margin-bottom: 10%;
 }
 
 @media (max-width: 500px) {
