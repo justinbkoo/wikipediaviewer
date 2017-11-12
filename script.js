@@ -75,7 +75,7 @@ function searchButtonOnClick() {
                     const markup = `
                     ${search.map(searchItem =>
                     `<a href="https://en.wikipedia.org/wiki/${searchItem["title"].replace(' ', '_')}">
-                        <li>${searchItem["title"]}
+                        <li class="listResult"><b>${searchItem["title"]}</b>
                             <h6>${pages[searchItem["pageid"] + ""].extract}</h6>
                         </li>
                     </a>`)
