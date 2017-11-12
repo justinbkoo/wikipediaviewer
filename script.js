@@ -2,10 +2,12 @@
 
 // Relevant object IDs
 var resultsId = "#results";
+var searchContainerId = "#search";
 var searchButtonId = "#search_button";
 var searchQueryId = "#search_query";
 
 // Relevant objects
+var searchContainer;
 var searchButton;
 var searchQuery;
 var results;
@@ -17,10 +19,10 @@ var query;
  * Initialize objects and click actions
  */
 $(document).ready(function () {
+   searchContainer = $(searchContainerId);
    searchButton = $(searchButtonId);
    searchQuery = $(searchQueryId);
    results = $(resultsId);
-
    searchButton.click(searchButtonOnClick);
 });
 
@@ -72,13 +74,15 @@ function searchButtonOnClick() {
                     //console.log(pages);
                     const markup = `
                     ${search.map(searchItem =>
-                        `<li>
-                            <a href="https://en.wikipedia.org/wiki/${searchItem["title"].replace(' ', '_')}">${searchItem["title"]}</a>
+                        `<a href="https://en.wikipedia.org/wiki/${searchItem["title"].replace(' ', '_')}"><li>
+                            ${searchItem["title"]}
                             <h5>${pages[searchItem["pageid"] + ""].extract}</h5>
-                         </li>`)
+                         </li></a>`)
                         .join('')}`;
                     //console.log(markup);
                     results.html(markup);
+                    // searchContainer.html("");
+                    $(".block").css("height", "25%");
                 }
             });
         }
