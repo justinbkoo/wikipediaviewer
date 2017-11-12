@@ -17,7 +17,6 @@ a {
 a:hover {
     text-decoration: none;
     color: black;
-    color: grey;
 }
 
 .block {
@@ -43,7 +42,7 @@ a:hover {
 #search_query {
     min-width: 250px;
     padding: 4px 15px 4px 15px;
-    border: 2px solid orange;
+    border: 3px solid orange;
     border-top-left-radius: 100%250px;
     border-bottom-left-radius: 100%250px;
     border-top-right-radius: 100%250px;
@@ -59,7 +58,7 @@ a:hover {
     height: 20px;
     width: 10px;
     vertical-align: middle;
-    margin-top: -65px;
+    margin-top: -69px;
     margin-left: 210px;
     background: transparent;
     border: none;
@@ -94,6 +93,18 @@ a:hover {
 
 #results {
     margin-bottom: 10%;
+    list-style: none;
+}
+
+.listResult {
+    background-color: #cccccc;
+    padding: 10px;
+    margin-top: 10px;
+    color: black;
+}
+
+.listResult:hover {
+    box-shadow: -5px 0px 0px orange;
 }
 
 @media (max-width: 500px) {
