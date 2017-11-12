@@ -2,29 +2,34 @@
 
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
-    <link rel = "stylesheet" type = "text/css" href = "styles.css" />
-
-    <script src="jquery-3.2.1.js"></script>
-    <script src="script.js"></script>
-</head>
-<body>
-    <div class="block">
-        <div id="search">
-            <input id="search_query" type="text">
-            <input id="search_button" type="submit">
-
-            <a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"><h5>Click here for a random article</h5></a>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+        <!--Style-->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/js/bootstrap.min.js" integrity="sha384-alpBpkh1PFOepccYVYDB4do5UnbKysX5WZXm3XxPqe5iKTfUKjNkCk9SaVuEZflJ" crossorigin="anonymous"></script>
+        <link rel = "stylesheet" type = "text/css" href = "styles.css" />
+        <!--Script-->
+        <script src="jquery-3.2.1.js"></script>
+        <script src="script.js"></script>
+    </head>
+    <body>
+        <div class="block">
+            <form onreset="clearResults()" onsubmit="return false" id="search">
+                <label for="query">Search Wikipedia</label><br>
+                <input id="search_query" type="text" name="query" autocomplete="off"><br>
+                <button id="reset_button" type="reset" value="">
+                    <div id="eks">
+                        <div class="forwardSlash"></div>
+                        <div class="backSlash"></div>
+                    </div>
+                </button>
+                <button id="search_button" type="submit" value="">
+                </button>
+                <!--<a href="https://en.wikipedia.org/wiki/Special:Random" target="_blank"><h5>I'm feeling lucky</h5></a>-->
+            </form>
         </div>
-    </div>
-
-<ol id="results" class="container-fluid">
-</ol>
-
-</body>
+        <ol id="results" class="container-fluid">
+        </ol>
+    </body>
 </html>
