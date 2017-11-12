@@ -1,0 +1,50 @@
+body {
+    background-color: white;
+    color: black;
+    vertical-align: middle;
+    height: 100vh;
+    min-height: 600px;
+    width: 100vw;
+    padding: 10% 20% 10% 20%;
+    overflow-x: hidden;
+}
+
+a {
+    text-decoration: none;
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    color: black;
+    color: grey;
+}
+
+.block {
+    text-align: center;
+    white-space: nowrap;
+    height: 100%;
+    vertical-align: middle;
+}
+
+.block:before {
+    content: '';
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+}
+
+#search {
+    display: inline-block;
+    vertical-align: middle;
+}
+
+#results {
+    /*margin-top: 50px;*/
+}
+
+@media (max-width: 500px) {
+    body {
+        padding: 2% 4% 2% 4%;
+    }
+}
