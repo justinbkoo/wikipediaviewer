@@ -38,7 +38,7 @@ function searchButtonOnClick() {
     }
     // console.log(query);
     $.ajax({
-        url:'http://en.wikipedia.org/w/api.php',
+        url:'https://en.wikipedia.org/w/api.php',
         data: {
             action: 'query',
             format: 'json',
@@ -57,7 +57,7 @@ function searchButtonOnClick() {
             const titles = search.map(searchItem => searchItem["title"]).join('|');
             //console.log(titles);
             $.ajax({
-                url:'http://en.wikipedia.org/w/api.php',
+                url:'https://en.wikipedia.org/w/api.php',
                 data: {
                     action: 'query',
                     format: 'json',
